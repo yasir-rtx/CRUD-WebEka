@@ -1,13 +1,13 @@
 <?php
-	echo "<a href='?p=mhsadd'>Tambah Data Mahasiswa</a>";
+	echo "<a href='?p=mhsadd'><img src='img/new.png' width='50px' height='50px'></a>";
 	echo "<table width='100%' border='1' cellpadding='10' cellspacing='10'>
 		<tr>
 			<th>NO</th>
-			<th>FOTO</th>
+			<th>PHOTO</th>
 			<th>MAHASISWA</th>
-			<th>DATA PERSONAL</th>
-			<th>KONTAK</th>
-			<th>AKSI</th>
+			<th>PERSONAL DATA</th>
+			<th>CONTACT</th>
+			<th>ACTION</th>
 		</tr>";
 	
 	$sqlm = mysqli_query($kon, "SELECT* FROM mahasiswa order by tglsimpan desc");
@@ -34,8 +34,8 @@
 				Email : <b>$rm[email]</b>
 			</td>
 			<td>
-				<a href='?p=mhsedit&id=$rm[idmhs]'>Ubah/</a>
-				<a href='?p=mhsdel&id=$rm[idmhs]'>Hapus</a>
+				<a href='?p=mhsedit&id=$rm[idmhs]'><img src='img/edit.png' width='50px' height='50px'></a><hr>
+				<a href='?p=mhsdel&id=$rm[idmhs]'><img src='img/delete.png' width='50px' height='50px'></a>
 			</td>
 		</tr>";
 		$no++;
