@@ -99,10 +99,10 @@
 			$foto WHERE idmhs='$_POST[idmhs]'");
 		
 		if($sqlm){
-			echo "Data Disimpan";
+			echo "Data Modified Succesfully";
 		}
 		else {
-			echo "Gagal Menyimpan";
+			echo "ERROR";
 		}
 		echo "<META HTTP-EQUIV='Refresh' Content='1; URL=?p=mhs'>";
 	}

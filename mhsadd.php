@@ -1,14 +1,14 @@
 <form id="form1" name="form1" method="post" action="" enctype="multipart/form-data">
   <p>
-    <label for="nobp">Nobp :</label>
+    <label for="nobp">Nobp : </label>
     <input type="text" name="nobp" id="nobp" placeholder="Nobp">
   </p>
   <p>
-    <label for="nama">Nama :</label> 
+    <label for="nama">Nama : </label> 
     <input type="text" name="nama" id="nama" placeholder="Nama Lengkap">
   </p>
   <p>
-    <label for="select">Kelas :</label>
+    <label for="select">Kelas : </label>
     <select name="kelas" id="kelas">
       <option value="IF1">IF1</option>
       <option value="IF2">IF2</option>
@@ -17,7 +17,7 @@
   </p>
   <p>
     <label for="tmplahir">Tempat/</label>
-    <label for="tgllahir">Tanggal Lahir :</label>
+    <label for="tgllahir">Tanggal Lahir : </label>
     <input type="text" name="tmplahir" id="tmplahir" placeholder="Tempat"> / 
     <input type="date" name="tgllahir" id="tgllahir" Tanggal>
   </p>
@@ -29,19 +29,19 @@
     <label for="p">Perempuan</label>
   </p>
   <p>
-    <label for="alamat">Alamat :</label>
+    <label for="alamat">Alamat : </label>
     <textarea name="alamat" id="alamat" placeholder="Alamat"></textarea>
   </p>
   <p>
-    <label for="hp">No Handphone :</label>
+    <label for="hp">No Handphone : </label>
     <input type="text" name="hp" id="hp" placeholder="No Handphone">
   </p>
   <p>
-    <label for="email">Email :</label>
+    <label for="email">Email : </label>
     <input type="text" name="email" id="email" placeholder="Email">
   </p>
   <p>
-    <label for="foto">Foto :</label>
+    <label for="foto">Foto : </label>
     <input type="file" name="foto" id="foto">
   </p>
   <p>
@@ -62,10 +62,10 @@
 		$sqlm = mysqli_query($kon, "insert into mahasiswa(nobp, nama, kelas, tmplahir, tgllahir, jk, alamat, hp, email, foto, tglsimpan) values('$_POST[nobp]','$_POST[nama]', '$_POST[kelas]', '$_POST[tmplahir]', '$_POST[tgllahir]', '$_POST[jk]', '$_POST[alamat]', '$_POST[hp]', '$_POST[email]', '$nmfoto', NOW())");
 		
 		if($sqlm){
-			echo "Data Disimpan";
+			echo "Data Saved Succesfully";
 		}
 		else {
-			echo "Gagal Menyimpan";
+			echo "ERROR";
 		}
 		echo "<META HTTP-EQUIV='Refresh' Content='1; URL=?p=mhs'>";
 	}
